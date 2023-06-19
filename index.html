@@ -1,0 +1,102 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<div style="background-color: #818CF8; height: 50px; margin-bottom: 10px; width: 100%; display: flex; align-items: center; justify-content: center; font-family: 'Press Start 2P', cursive;">
+<h3>The Last Samurai</h3>
+</div>
+
+<!--red container div-->
+<div style="position: relative; display: inline-block; left:242px; border: 4px solid gray">
+    <!--smaller red container div-->
+    <div style="position: absolute; display: flex; width: 100%; align-items:center; padding: 20px;">
+
+        <!-- player health -->
+        <div style="position: relative; width: 100%; display:flex; justify-content: flex-end; border-top: 4px solid white; border-left: 4px solid white; border-bottom: 4px solid white">
+            <div style="background-color:red; height: 35px; width: 100%;"></div>
+            <div id="playerHealth" style="position: absolute; background: #818CF8; top:0; right:0; width:100%;  bottom:0; "></div>
+        </div>
+
+        <!-- timer -->
+        <div id="timer" style="background-color:black; width: 100px; height: 60px; flex-shrink: 0; display:flex; align-items:center; justify-content:center; color: white;  border: 4px solid gray; font-family: 'Press Start 2P', cursive;">
+            10
+        </div>
+
+        <!-- enemy health -->
+        <div style="position: relative; width: 100%;  border-top: 4px solid white; border-right: 4px solid white; border-bottom: 4px solid white">
+        <div style="background-color:red; height: 35px; "></div>
+        <div id="enemyHealth" style="position: absolute; background: #818CF8; top:0; right:0; left:0; bottom:0; "></div>
+        </div>
+        <div></div>
+    </div>
+    <div id="displayText" style="position: absolute; color: white; align-items:center; justify-content:center; top:0; right: 0; bottom: 0; left: 0; display:none; font-family: 'Press Start 2P', cursive;">
+        Tie
+    </div>
+
+    <div id="restart" style="position: absolute; color: white; align-items:center; justify-content:center; top:500px; right: 0; bottom: 0; left: 0; display:none;  font-family: 'Press Start 2P', cursive;">
+        restart
+    </div>
+    <canvas></canvas>
+</div>
+
+<div style="width: 14%; position: fixed; z-index: 1; top: 230px; left:10px;  font-family: 'Press Start 2P', cursive; background-color: mediumslateblue; padding: 10px ">
+           <h5>
+               left side keys:
+           </h5>
+            <h5>
+                A: Move Left
+            </h5>
+            <h5>
+                D: Move Right
+            </h5>
+            <h5>
+                W: Jump
+            </h5>
+            <h5>
+                Space: Attack
+            </h5>
+
+        </div>
+
+<div style="width: 14%; position: fixed; z-index: 1; top: 230px; right:10px;  font-family: 'Press Start 2P', cursive; background-color: mediumvioletred; padding: 10px ">
+            <h5>
+                Right side keys:
+            </h5>
+            <h5>
+                Arrow left : Move Left
+            </h5>
+            <h5>
+                Arrow right : Move Right
+            </h5>
+            <h5>
+                Arrow up : Jump
+            </h5>
+            <h5>
+                Arrow down : Attack
+            </h5>
+
+        </div>
+
+<footer style="display: flex; justify-content: center; font-family: 'Press Start 2P', cursive; ">
+    <h5>
+    Created by
+    <a href="http://localhost:3000/">
+     Ranul Rathnayake
+    </a>
+    </h5>
+</footer>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/utils.js"></script>
+<script src="js/classes.js"></script>
+<script src="index.js"></script>
